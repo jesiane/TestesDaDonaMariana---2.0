@@ -39,9 +39,9 @@ namespace TestesDaDonaMariana.WinApp.ModuloMateria
             {
                 Materia materia = tela.ObterMateria();
 
-                materia.disciplina.materias.Add(materia);
-
                 repositorioMateria.Inserir(materia);
+
+                materia.disciplina.materias.Add(materia);
 
                 CarregarMaterias();
             }
@@ -64,15 +64,6 @@ namespace TestesDaDonaMariana.WinApp.ModuloMateria
 
                 return;
             }
-            //if (repositorioQuestao.SelecionarTodos().Any(x => x.materia.id == materiaSelecionada.id))
-            //{
-            //    MessageBox.Show($"Não é possivel editar essa materias pois ela possuí vinculo com ao menos uma questão!",
-            //        "Edição de Materia",
-            //        MessageBoxButtons.OK,
-            //        MessageBoxIcon.Exclamation);
-
-            //    return;
-            //}
 
             TelaMateriaForm tela = new(repositorioMateria.SelecionarTodos(), repositorioDisciplina.SelecionarTodos(), seriesEnum);
 
@@ -109,16 +100,7 @@ namespace TestesDaDonaMariana.WinApp.ModuloMateria
 
                 return;
             }
-            //if (repositorioQuestao.SelecionarTodos().Any(x => x.materia.id == materia.id))
-            //{
-            //    MessageBox.Show($"Não é possivel remover essa materias pois ela possuí vinculo com ao menos uma questão!",
-            //        "Exclusão de Materia",
-            //        MessageBoxButtons.OK,
-            //        MessageBoxIcon.Exclamation);
-
-            //    return;
-            //}
-
+         
             DialogResult opcaoEscolhida = MessageBox.Show($"Deseja excluir o item {materia.titulo}?",
                 "Exclusão de Materia",
                 MessageBoxButtons.OKCancel,

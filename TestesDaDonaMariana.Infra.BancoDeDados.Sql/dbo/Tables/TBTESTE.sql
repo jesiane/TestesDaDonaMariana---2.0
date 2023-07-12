@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[TBTESTE] (
     [id]            INT           IDENTITY (1, 1) NOT NULL,
     [titulo]        VARCHAR (100) NOT NULL,
-    [numQuestoes]   INT           NOT NULL,
+    [quantidadeQuestoes]   INT           NOT NULL,
     [dataCriacao]   DATETIME      NOT NULL,
     [disciplina_id] INT           NOT NULL,
     CONSTRAINT [PK_TBTeste] PRIMARY KEY CLUSTERED ([id] ASC),

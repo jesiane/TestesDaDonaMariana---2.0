@@ -5,7 +5,7 @@ namespace TestesDaDonaMariana.Infra.Dados.Sql.ModuloTeste
     public class RepositorioTesteSql : RepositorioBaseSql<Teste, MapeadorTeste>, IRepositorioTeste
     {
         protected override string sqlInserir => @"INSERT INTO [TBTESTE] 
-                                                ([titulo], [QuantidadeQuestoes], [dataCriacao], [disciplina_id])
+                                                ([titulo], [quantidadeQuestoes], [dataCriacao], [disciplina_id])
                                               VALUES 
                                                 (@TITULO, @NUMQUESTOES, @DATACRIACAO, @DISCIPLINA_ID);                  
                                               SELECT SCOPE_IDENTITY();";
